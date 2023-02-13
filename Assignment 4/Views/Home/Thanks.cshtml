@@ -1,0 +1,29 @@
+﻿@model Assignment_4.Models.Registrations
+@{
+    ViewData["Title"] = "Thanks";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <p>
+        @if (Model.WillAttend == true)
+        {
+            @:It's great that your're registered. 
+        }
+        else
+        {
+            @:Sorry to hear that you don't want to be registered.
+        }
+    </p>
+    <p>
+        Click <a asp-action="ListRegistrations">here</a>to see who is registered.
+    </p>
+</body>
+</html>
+

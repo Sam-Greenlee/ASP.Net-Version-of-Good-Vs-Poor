@@ -1,0 +1,43 @@
+﻿@model Assignment_4.Models.Registrations
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h2>Registration</h2>
+
+<html>
+<head>
+</head>
+<body>
+    <form asp-action="Registration" method="post">
+        @if (! ViewData.ModelState.IsValid) {
+            <div asp-validation-summary="All"></div>
+        }
+        <p>
+            <label asp-for="FirstName">First Name:</label>
+            <input asp-for="FirstName" />
+        </p>
+        <p>
+            <label asp-for="LastName">Last Name:</label>
+            <input asp-for="LastName" />
+        </p>
+        <p>
+            <label asp-for="Email">Email:</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="Phone">Phone Number:</label>
+            <input asp-for="Phone" />
+        </p>
+        <p>
+            <label>Will you registered?</label>
+            <select asp-for="WillAttend">
+                <option value="">Choose an option</option>
+                <option value="true">Yes, I'll be registered</option>
+                <option value="false">No, I can't be registered</option>
+            </select>
+        </p>
+        <button type"submit">Submit</button>
+    </form>
+</body>
+</html>

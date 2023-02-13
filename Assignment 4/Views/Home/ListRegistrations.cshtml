@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "ListRegistrations";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListRegistrations</title>
+    <style>table { width: 100% }
+           td { border: 1px solid gray}</style>
+</head>
+<body>
+    <h2>Here is the list of people registered</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Assignment_4.Models.Registrations r in Model)
+            {
+                <tr>
+                    <td>@r.FirstName</td>
+                    <td>@r.LastName</td>
+                    <td>@r.Email</td>
+                    <td>@r.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+
+
